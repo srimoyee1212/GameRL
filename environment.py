@@ -15,11 +15,13 @@ class CartPoleEnvironment:
     def reset(self):
         state = self.env.reset()
         print("Reset state:", state)
+        self.env.render()
         return self.discretize(state)
 
     def step(self, action):
         next_state, reward, done, _, item5 = self.env.step(action)
         print("Next state:", next_state)
+        self.env.render()
         return self.discretize(next_state), reward, done
 
     def discretize(self, state):

@@ -1,6 +1,7 @@
 from environment import CartPoleEnvironment
 from agent import QLearningAgent
 import numpy as np
+import time
 
 def test_agent():
     env = CartPoleEnvironment()
@@ -18,6 +19,7 @@ def test_agent():
             agent.update_q_table(state, action, reward, next_state)
             total_reward += reward
             state = next_state
+            time.sleep(0.01)
             if done:
                 break
         agent.decay_epsilon()
