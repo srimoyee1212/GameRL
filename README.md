@@ -57,7 +57,7 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ## Usage
 ```bash
 python test_agent.py
-
+```
 
 ## Files
 1. agent.py: Contains the QLearningAgent class, implementing the Q-learning algorithm.
